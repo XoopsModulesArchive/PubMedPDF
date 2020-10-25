@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<!DOCTYPE doc[
+<!ELEMENT ppdfArticleSet    (ppdfArticle)>
+<!ELEMENT ppdfAriticle      (ppdfIndex,DateCreated,DateCompleted?,DateRevised?,Article)>
+<!ELEMENT ppdfIndex         (#PCDATA)>
+<!ELEMENT DateCreated       (Year,Month,Day)>
+<!ELEMENT DateCompleted     (Year,Month,Day)>
+<!ELEMENT DateRevised       (Year,Month,Day)>
+<!ELEMENT Year              (#PCDATA)>
+<!ELEMENT Month             (#PCDATA)>
+<!ELEMENT Day               (#PCDATA)>
+
+<!ELEMENT Article           ((Journal|Book)?,ArticleTitle,Pagination?,Abstract?,Affiliation?, AuthorList)>
+<!ELEMENT Journal           (JournalIssue)>
+<!ELEMENT JournalIssue      (Volume?,Issue?,PubDate?)>
+<!ELEMENT PubDate           (Year,Month?,Day?)>
+<!ELEMENT Volume            (#PCDATA)>
+<!ELEMENT Issue             (#PCDATA)>
+<!ATTLIST JournalIssue PrintYN (Y|N) "Y">
+<!ELEMENT ArticleTitle      (#PCDATA)>
+<!ELEMENT Pagination        (MedlinePgn)>
+<!ELEMENT MedlinePgn        (#PCDATA)>
+<!ELEMENT Abstract          (#PCDATA)>
+<!ELEMENT Affiliation       (#PCDATA)>
+<!ELEMENT AuthorList        (Author*)>
+<!ELEMENT Author            (LastName, ForeName, Initials)>
+<!ELEMENT LastName          (#PCDATA)>
+<!ELEMENT ForeName          (#PCDATA)>
+<!ELEMENT Initials          (#PCDATA)>
+<!ATTLIST AuthorList CompleteYN (Y|N) "Y">
+
+<!ELEMENT Language            (#PCDATA)>
+<!ELEMENT PublicationTypeList (PublicationType)>
+<!ELEMENT PublicationType     (#PCDATA)>
+
+<!ELEMENT MedlineJournalInfo  (Country?,MedlineTA?,NlmUniqueID?)>
+<!ELEMENT Contry              (#PCDATA)>
+<!ELEMENT MedlineTA           (#PCDATA)>
+<!ELEMENT NlmUniqueID         (#PCDATA)>
+]>
+
+<ppdfArticleSet>
+<ppdfArticle>
+
+<ppdfIndex>1999~Ikeno_H~Nishioka_T_test_10_512_2</ppdfIndex>
+<DateCreated>
+<Year>2004</Year>
+<Month>12</Month>
+<Day>7</Day>
+</DateCreated>
+<DateCompleted>
+<Year>2004</Year>
+<Month>12</Month>
+<Day>7</Day>
+</DateCompleted>
+<DateRevised>
+<Year>2004</Year>
+<Month>12</Month>
+<Day>7</Day>
+</DateRevised>
+
+<Journal>
+<JournalIssue PrintYN="Y">
+<Volume>12</Volume>
+<Issue>4</Issue>
+<PubDate>
+<Year>2000</Year>
+<Month>10</Month>
+<Day>11</Day>
+</PubDate>
+</JournalIssue>
+</Journal>
+
+<ArticleTitle>Test for XML</ArticleTitle>
+<Pagination>
+<MedlinePgn>461-74</MedlinePgn>
+</Pagination>
+<Abstract>This is abstract</Abstract>
+<Affiliation>University of Hyogo</Affiliation>
+<AuthorList CompleteYN="Y">
+<Author>
+<LastName>Devaud</LastName>
+<ForeName>J M</ForeName>
+<Initials>JM</Initials>
+</Author>
+<Author>
+<LastName>Masson</LastName>
+<ForeName>C</ForeName>
+<Initials>C</Initials>
+</Author>
+</AuthorList>
+
+<Language>eng</Language>
+<PublicationTypeList>
+<PublicationType>Journal Article</PublicationType>
+</PublicationTypeList>
+
+<MedlineJournalInfo>
+<Country>United State</Country>
+<MedlineTA>J Neurobiol</MedlineTA>
+<NlmUniqueID>0213640</NlmUniqueID>
+</MedlineJournalInfo>
+
+</ppdfArticle>
+</ppdfArticleSet>

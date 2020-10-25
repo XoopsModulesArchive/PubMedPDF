@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE doc[
+<!ELEMENT ppdfArticleSet    (ppdfArticle)>
+<!ELEMENT ppdfAriticle      (ppdfIndex,DateCreated,DateCompleted?,DateRevised?,Article,Language,MedlineJournalInfo,JournalJPInfo?)>
+<!ELEMENT ppdfIndex         (#PCDATA)>
+<!ELEMENT DateCreated       (Year,Month,Day)>
+<!ELEMENT DateCompleted     (Year,Month,Day)>
+<!ELEMENT DateRevised       (Year,Month,Day)>
+<!ELEMENT Year              (#PCDATA)>
+<!ELEMENT Month             (#PCDATA)>
+<!ELEMENT Day               (#PCDATA)>
+
+<!ELEMENT Article           ((Journal|Book)?,ArticleTitle,ArticleTitleJP?,Pagination?,Abstract?,Affiliation?, AuthorList, AuthorListJP?)>
+<!ELEMENT Journal           (JournalIssue)>
+<!ELEMENT JournalIssue      (Volume?,Issue?,PubDate?)>
+<!ELEMENT PubDate           (Year,Month?,Day?)>
+<!ELEMENT Volume            (#PCDATA)>
+<!ELEMENT Issue             (#PCDATA)>
+<!ATTLIST JournalIssue PrintYN (Y|N) "Y">
+<!ELEMENT ArticleTitle      (#PCDATA)>
+<!ELEMENT ArticleTitleJP    (#PCDATA)>
+<!ELEMENT Pagination        (MedlinePgn)>
+<!ELEMENT MedlinePgn        (#PCDATA)>
+<!ELEMENT Abstract          (#PCDATA)>
+<!ELEMENT Affiliation       (#PCDATA)>
+<!ELEMENT AuthorList        (Author*)>
+<!ELEMENT Author            (LastName, ForeName, Initials)>
+<!ELEMENT LastName          (#PCDATA)>
+<!ELEMENT ForeName          (#PCDATA)>
+<!ELEMENT Initials          (#PCDATA)>
+<!ATTLIST AuthorList CompleteYN (Y|N) "Y">
+<!ELEMENT AuthorListJP      (#PCDATA)>
+
+<!ELEMENT Language            (#PCDATA)>
+<!ELEMENT PublicationTypeList (PublicationType)>
+<!ELEMENT PublicationType     (#PCDATA)>
+
+<!ELEMENT MedlineJournalInfo  (Country?,MedlineTA?,NlmUniqueID?)>
+<!ELEMENT Contry              (#PCDATA)>
+<!ELEMENT MedlineTA           (#PCDATA)>
+<!ELEMENT NlmUniqueID         (#PCDATA)>
+
+<!ELEMENT MedlineJournalInfo  (JournalJP?)>
+<!ELEMENT JournalJP           (#PCDATA)>
+]>
